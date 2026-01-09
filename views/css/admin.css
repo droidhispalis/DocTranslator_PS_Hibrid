@@ -1,0 +1,193 @@
+/**
+ * DocTranslator - Estilos Admin
+ */
+
+/* Panel principal */
+#doctranslator-panel .panel-heading .badge {
+    margin-left: 10px;
+}
+
+/* Zona de upload */
+.upload-zone {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+}
+
+.upload-zone:hover,
+.upload-zone.dragover {
+    border-color: #25b9d7;
+    background: rgba(37, 185, 215, 0.05);
+}
+
+.upload-zone.has-file {
+    padding: 20px;
+    border-style: solid;
+    border-color: #25b9d7;
+}
+
+.upload-zone i.icon-cloud-upload {
+    font-size: 48px;
+    color: #25b9d7;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.upload-zone p {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.upload-zone small {
+    color: #999;
+}
+
+/* File info */
+#file-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#file-info i.icon-file-text {
+    font-size: 32px;
+    color: #25b9d7;
+}
+
+#file-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#file-size {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Botón de traducir */
+#translate-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+}
+
+#translate-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Progreso */
+#progress-section {
+    margin: 20px 0;
+}
+
+#progress-section .progress {
+    height: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#progress-section .progress-bar {
+    line-height: 25px;
+    font-size: 14px;
+}
+
+#progress-text {
+    margin-top: 10px;
+}
+
+/* Resultado */
+#result-section,
+#error-section {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#result-section h4,
+#error-section h4 {
+    margin-top: 0;
+}
+
+#download-btn {
+    margin-right: 10px;
+}
+
+/* Historial */
+.table .label {
+    font-size: 11px;
+}
+
+.table .badge {
+    background: #555;
+    font-size: 10px;
+}
+
+.table .icon-arrow-right {
+    margin: 0 5px;
+    color: #999;
+}
+
+/* Botón swap */
+#swap-langs {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+#swap-langs:hover {
+    transform: rotate(180deg);
+    background: #25b9d7;
+    color: #fff;
+    border-color: #25b9d7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .upload-zone {
+        padding: 20px;
+    }
+    
+    .upload-zone i.icon-cloud-upload {
+        font-size: 32px;
+    }
+    
+    #translate-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Animación de carga */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Estados de traducción */
+.label-success {
+    background-color: #4caf50;
+}
+
+.label-warning {
+    background-color: #ff9800;
+}
+
+.label-danger {
+    background-color: #f44336;
+}
+
+.label-default {
+    background-color: #9e9e9e;
+}
